@@ -1,0 +1,759 @@
+:root {
+    --ink: #5e5e5e;
+    --sub: #5e5e5e;
+    --bg: #fff;
+    --bg-pink-beige: #ead9e0;
+
+    /* 背景画像 */
+    --hero-img-1: url("../images/hero-1.jpg");
+    --hero-img-2: url("../images/hero-2.jpg");
+    /* ← 花瓶の写真 */
+    --hero-img-3: url("../images/hero-3.jpg");
+    --hero-img-4: url("../images/hero-4.jpg");
+
+    --hero-overlay-from: rgba(255, 255, 255, 0.78);
+    --hero-overlay-to: rgba(255, 255, 255, 0.35);
+
+    /* フォント - Zen Kaku Gothic New（元のゴシック体） */
+    --font-body: "Zen Kaku Gothic New", system-ui, -apple-system, "Segoe UI", Roboto,
+        "Noto Sans JP", sans-serif;
+    --font-brand: "Playfair Display", serif;
+}
+
+/* ========== リセット & ベース ========== */
+html,
+body {
+    margin: 0;
+}
+
+body {
+    font: 16px/1.8 var(--font-body);
+    color: var(--ink);
+    background: var(--bg);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+/* ========== ヘッダー ========== */
+.site-header {
+    position: fixed;
+    inset: 0 0 auto 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 20px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: saturate(1.2) blur(6px);
+    border-bottom: 1px solid #eee;
+    z-index: 20;
+}
+
+.site-header .nav a {
+    font-size: 1.1rem;
+    /* ← お好みのサイズに調整 */
+}
+
+.site-header .nav a {
+    display: inline-block;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.site-header .nav a:hover {
+    color: #71b118 !important;
+    transform: translateY(-3px);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+
+.brand {
+    font-family: var(--font-brand);
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-size: 1.25rem;
+}
+
+.nav {
+    display: flex;
+    gap: 14px;
+}
+
+/* ボタン */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.65rem 1rem;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    transition: 0.2s;
+}
+
+.cta {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.btn--outline {
+    background: #fff;
+}
+
+.btn--solid,
+.btn--ghost {
+    background: transparent;
+    color: inherit;
+    border-color: #e5e5e5;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* リンク初期化 */
+a,
+a:visited {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+/* ========== HERO セクション ========== */
+.hero {
+    position: relative;
+    min-height: 72svh;
+    display: grid;
+    place-items: center;
+    padding-top: 96px;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(180deg,
+            var(--hero-overlay-from),
+            var(--hero-overlay-to));
+}
+
+.hero .hero__inner {
+    width: min(100%, 1100px);
+    padding: clamp(16px, 4vw, 40px);
+}
+
+/* .section h2 {
+    font-size: 2rem !important;
+    margin-bottom: 5rem;
+} */
+
+
+.theme-4 .hero::before {
+    background-image: var(--hero-img-4);
+}
+
+
+.theme-5 .hero::before {
+    background-image: var(--hero-img-3);
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    left: 0;
+}
+
+.theme-5 .hero::after {
+    background: none !important;
+}
+
+/* ========== レイアウト調整 ========== */
+
+/* 右寄せ文字配置 */
+.hero.align-right {
+    justify-items: end;
+    text-align: right;
+}
+
+/* 右寄せ時のインナー幅 */
+.hero.align-right .hero__inner {
+    margin-left: auto;
+    padding-right: clamp(24px, 6vw, 72px);
+    padding-left: clamp(8px, 3vw, 32px);
+    max-width: min(52ch, 48vw);
+}
+
+/* キャッチをやや左寄せ */
+.hero.nudge-left .hero__inner {
+    transform: translateX(-3vw);
+    max-width: min(46ch, 44vw);
+    padding-right: clamp(18px, 4.5vw, 56px);
+    padding-left: clamp(16px, 4vw, 48px);
+}
+
+/* オーバーレイ無効（写真そのまま） */
+.hero.no-overlay::after {
+    background: none !important;
+}
+
+/* 文字トーンを柔らかく */
+.hero.tone-soft .catch {
+    color: rgba(0, 0, 0, 0.82);
+    font-weight: 600;
+    letter-spacing: 0.005em;
+}
+
+.hero.tone-soft .sub {
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.hero.no-crop::before {
+    background-size: contain !important;
+    background-position: left bottom !important;
+    background-repeat: no-repeat;
+}
+
+.hero.no-crop {
+    min-height: clamp(560px, 62vw, 780px);
+}
+
+/* オーバーレイ（使う場合） */
+.hero.overlay-left::after {
+    background: linear-gradient(90deg,
+            rgba(255, 255, 255, 0.78) 0%,
+            rgba(255, 255, 255, 0.62) 18%,
+            rgba(255, 255, 255, 0.28) 40%,
+            rgba(255, 255, 255, 0.08) 62%,
+            rgba(255, 255, 255, 0) 82%);
+}
+
+/* 見出しとサブ */
+.hero--compact .catch {
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    line-height: 1.28;
+    font-size: clamp(1.4rem, 1.6vw + 0.9rem, 2.2rem);
+    margin: .35rem 0 .9rem;
+}
+
+.hero--compact .sub {
+    font-size: clamp(1rem, 1vw + 0.85rem, 1.15rem);
+    opacity: 0.9;
+}
+
+.nudge-left-strong .hero__inner {
+    transform: translateX(-23vw);
+    max-width: min(48ch, 46vw);
+    padding-right: clamp(16px, 4vw, 48px);
+    padding-left: clamp(18px, 4.5vw, 56px);
+    text-align: center;
+}
+
+/* theme-5: 中央にテキストを配置 */
+.theme-5.hero {
+    justify-items: center;
+}
+
+.theme-5 .hero__inner {
+    margin-right: auto;
+    margin-left: auto;
+    padding: clamp(40px, 6vw, 80px) clamp(40px, 6vw, 80px);
+    max-width: min(60ch, 80vw);
+    text-align: center;
+    transform: none;
+    background: none;
+}
+
+/* theme-5: 白文字で表示 */
+.theme-5 .hero__inner,
+.theme-5 .hero__inner .catch,
+.theme-5 .hero__inner .sub,
+.theme-5 .hero__inner .eyebrow {
+    color: #ffffff !important;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.theme-5 .hero--compact .catch {
+    color: #ffffff !important;
+    font-weight: 400 !important;
+}
+
+.theme-5 .btn {
+    color: #ffffff !important;
+    border-color: rgba(255, 255, 255, 0.6) !important;
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+.theme-5 .btn:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+}
+
+/* theme-5-option1: フォントを太くする */
+.theme-5-option1 .hero--compact .catch {
+    font-weight: 700 !important;
+}
+
+/* theme-5-option2: 影を強くする */
+.theme-5-option2 .hero__inner,
+.theme-5-option2 .hero__inner .catch,
+.theme-5-option2 .hero__inner .sub,
+.theme-5-option2 .hero__inner .eyebrow {
+    text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35), 0 1px 3px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* theme-5-option3: ハイブリッド（少し太く+影強化） */
+.theme-5-option3 .hero--compact .catch {
+    font-weight: 600 !important;
+}
+
+.theme-5-option3 .hero__inner,
+.theme-5-option3 .hero__inner .catch,
+.theme-5-option3 .hero__inner .sub,
+.theme-5-option3 .hero__inner .eyebrow {
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* theme-5-option4: 背景にオーバーレイ追加 */
+.theme-5-option4 .hero::before {
+    filter: brightness(0.75) !important;
+}
+
+/* アイブロウ */
+.eyebrow {
+    font-size: 0.8rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    opacity: 0.65;
+    position: relative;
+    display: inline-block;
+    padding-top: 0.6rem;
+}
+
+/* ========== セクション・フッター ========== */
+.section {
+    padding: 56px 20px;
+}
+
+.site-footer {
+    padding: 30px 20px;
+    border-top: 1px solid #eee;
+    color: #666;
+    text-align: center;
+}
+
+
+/* プロジェクトカード */
+
+.slider {
+    max-width: clamp(640px, 70vw, 980px);
+    margin: 12px auto 20px;
+    position: relative;
+}
+
+.slider__viewport {
+    overflow: hidden;
+    border-radius: 14px;
+    background: #f7f7f7;
+    border: 1px solid #eee;
+}
+
+.slider__track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
+}
+
+.slide {
+    flex: 0 0 100%;
+    scroll-snap-align: start;
+}
+
+.slide figure {
+    margin: 0;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .06);
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 16/9;
+    /* 高さが伸びすぎない */
+    object-fit: cover;
+}
+
+.slide figcaption {
+    font-size: .92rem;
+    color: #666;
+    padding: 10px 12px;
+}
+
+/* ナビゲーションボタン */
+.slider__nav .nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 999px;
+    border: 1px solid #ddd;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+    font-size: 22px;
+    line-height: 38px;
+    text-align: center;
+    cursor: pointer;
+    opacity: .9;
+}
+
+.nav-btn--prev {
+    left: -14px;
+}
+
+.nav-btn--next {
+    right: -14px;
+}
+
+.nav-btn:hover {
+    opacity: 1;
+}
+
+.project-content {
+    padding: 2rem;
+}
+
+.project-status {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    background: #e8f5e9;
+    color: #2e7d32;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.project-description {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.project-demo {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.demo-note {
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.demo-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.demo-buttons .btn {
+    flex: 1;
+    text-align: center;
+}
+
+.login-info {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: white;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.login-info summary {
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.login-info code {
+    background: #e9ecef;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+}
+
+.project-features h4 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.project-features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.project-features li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.project-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #4caf50;
+    font-weight: bold;
+}
+
+.tech-stack {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.tech-tag {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+#works {
+    --inner: min(1100px, 92vw);
+}
+
+/* 見出し */
+#works h2 {
+    width: var(--inner);
+    margin: 0 auto 28px;
+    text-align: center;
+    letter-spacing: .12em;
+    font-size: 2.3rem;
+}
+
+/* タイトル＆リード文（すでにcenter指示があるが、幅も揃える） */
+#works .project-card__head,
+#works .project-card__lead {
+    width: var(--inner);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/* スライダー本体も中央に */
+#works .slider {
+    width: var(--inner);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* 2カラム（機能/技術）のブロックを中央のグリッドに */
+#works .project-card__cols {
+    width: var(--inner);
+    margin: 24px auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 32px;
+    align-items: start;
+}
+
+/* ボタン行も中央 */
+#works .project-card__actions {
+    width: var(--inner);
+    margin: 24px auto 0;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.project-card__col h4 {
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-card__col h4:first-of-type {
+    margin-top: 0;
+}
+
+.section {
+    padding: 56px 20px;
+}
+
+#skill h2 {
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 4rem;
+}
+
+.skill-category {
+    margin-bottom: 3rem;
+}
+
+.skill-category h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.skill-icons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skill-item i {
+    font-size: 3.5rem;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover i {
+    transform: scale(1.1);
+}
+
+.skill-item p {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+    margin: 0;
+}
+
+/* ABOUTセクション */
+/* #about {
+    background: #f8f8f8;
+    padding: 56px 40px;
+}
+
+#about h2 {
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 4rem;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 4rem;
+    align-items: start;
+} */
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 1rem;
+    align-items: start;
+}
+
+/* .profile-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #e0e0e0;
+    border: 3px solid #ddd;
+} */
+
+.about-profile {
+    position: relative;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #f0f0f0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #999;
+}
+
+/* お問い合わせセクション中央揃え */
+#contact {
+    text-align: center;
+}
+
+/* スマホではレターボックスを避けたい → cover に戻す */
+@media (max-width: 900px) {
+    .hero.no-crop::before {
+        background-size: cover !important;
+        background-position: center !important;
+    }
+
+    .hero.no-crop {
+        min-height: 68svh;
+    }
+
+    .slider {
+        max-width: 100%;
+    }
+
+    .nav-btn--prev {
+        left: 6px;
+    }
+
+    .nav-btn--next {
+        right: 6px;
+    }
+
+    #works .project-card__cols {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .skill-icons {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .skill-item i {
+        font-size: 3rem;
+    }
+
+    .site-header .nav a {
+        font-size: 1rem;
+    }
+}
