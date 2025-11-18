@@ -4,35 +4,35 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Portfolio – K.Ichiki</title>
+    <title>Portfolio – K.Ichiki (Option 4: 背景暗め)</title>
     <link rel="stylesheet" href="css/style-unified.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 </head>
 
-<!-- theme-5: 左側に緑の葉、右側にピンクベージュ背景 -->
+<!-- オプション4: 背景にオーバーレイ追加 -->
 
-<body class="theme-5">
+<body class="theme-5 theme-5-option4">
 
     <header class="site-header">
         <a class="brand" href="/">K.Ichiki</a>
         <nav class="nav">
-            <a href="#news">news</a>
-            <a href="#about">about</a>
             <a href="#works">works</a>
+            <a href="#skill">skill</a>
+            <a href="#about">about</a>
             <a href="#contact">contact</a>
         </nav>
     </header>
 
     <main>
-        <!-- 右側にテキスト、中央揃え -->
         <section class="hero hero--compact tone-soft" aria-label="ファーストビュー">
             <div class="hero__inner">
                 <p class="eyebrow">WEBアプリ開発 / 予約・会員機能</p>
                 <h2 class="catch">
-                    アイディアや想いを、<br>丁寧なWebアプリとして形にします
+                    アイディアや想いを<br>丁寧なWebアプリとして<br>形にします
                 </h2>
                 <p class="sub">
                     目的やターゲットに合わせて<br>
@@ -47,10 +47,627 @@
             </div>
         </section>
 
-        <!-- ダミーセクション（後で差し替え） -->
         <section id="works" class="section">
-            <h2>制作事例</h2>
-            <p>ここに作品カードを並べます。</p>
+            <h2>WORKS</h2>
+
+            <section class="project-card" id="work-vanilla">
+                <header class="project-card__head">
+                    <h3 class="project-card__title">Vanilla's Kitchen（レシピアプリ・デモ）</h3>
+                    <span class="badge badge--pending" aria-label="準備中">準備中</span>
+                </header>
+
+                <p class="project-card__lead">
+                    管理者が投稿するレシピを、会員ユーザーが閲覧・お気に入り・コメントできるアプリです。<br>Firebase認証とストレージ、Laravel API、Nuxt 3で構成し、PC/スマホに最適化しています。
+                </p>
+
+                <!-- ギャラリー -->
+                <div class="slider" aria-label="画面紹介スライド">
+                    <div class="slider__viewport">
+                        <div class="slider__track">
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/vanilla/login.png" alt="ようこそ画面：登録/ログイン導線">
+                                    <figcaption>ようこそ：登録/ログイン導線</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/vanilla/list.png" alt="レシピ一覧：検索&カード表示">
+                                    <figcaption>レシピ一覧：検索&カード表示</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/vanilla/detail.png" alt="詳細：材料/手順/コメント/いいね">
+                                    <figcaption>詳細：材料/手順/コメント/いいね</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/vanilla/favorite.png" alt="お気に入り：いいねしたレシピのみ">
+                                    <figcaption>お気に入り：いいねしたレシピのみ</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/vanilla/admin-dashboard.png" alt="管理：KPI（投稿/更新/ユーザー）">
+                                    <figcaption>管理：KPI（投稿/更新/ユーザー）</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/vanilla/admin-new.png" alt="管理：レシピ新規投稿">
+                                    <figcaption>管理：レシピ新規投稿</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/vanilla/admin-comments.png" alt="管理：コメント管理">
+                                    <figcaption>管理：コメント管理</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 前へ / 次へ -->
+                    <div class="slider__nav">
+                        <button type="button" class="nav-btn nav-btn--prev" data-prev aria-label="前へ">‹</button>
+                        <button type="button" class="nav-btn nav-btn--next" data-next aria-label="次へ">›</button>
+                    </div>
+                </div>
+
+                <div class="project-card__cols">
+                    <div class="project-card__col">
+                        <h4>ユーザー機能</h4>
+                        <ul class="list">
+                            <li>会員登録 / ログイン（Firebase Auth）</li>
+                            <li>レシピ閲覧・検索（キーワード）</li>
+                            <li>いいね / お気に入り一覧に自動反映</li>
+                            <li>レシピ詳細からコメント投稿</li>
+                            <li>プロフィール編集</li>
+                            <li>レスポンシブ対応</li>
+                        </ul>
+
+                        <h4>管理者機能</h4>
+                        <ul class="list">
+                            <li>レシピの投稿・編集・削除</li>
+                            <li>コメント一覧・削除（モデレーション）</li>
+                            <li>ユーザー数カウント表示</li>
+                            <li>最近更新・最近削除の可視化</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-card__col">
+                        <h4>技術スタック</h4>
+                        <ul class="chips">
+                            <li>JavaScript (ES2020+)</li>
+                            <li>Vue 3 / Nuxt 3</li>
+                            <li>PHP 8.1 / Laravel 8.75</li>
+                            <li>Firebase Auth / Firebase Storage</li>
+                            <li>MySQL</li>
+                            <li>Docker</li>
+                        </ul>
+
+                        <h4>制作</h4>
+                        <p>個人開発</p>
+
+                        <h4>実装内容</h4>
+                        <p>要件定義 / UI設計 / フロントエンド実装 / バックエンド実装 / Firebase連携 / Docker環境構築 / デプロイ / 運用</p>
+
+                        <h4>GitHub</h4>
+                        <p>
+                            <a href="https://github.com/ichiki925/recipe-app-demo" target="_blank" rel="noopener">
+                                フロントエンド / バックエンド（Vanilla's Kitchen Demo）
+                            </a>
+                        </p>
+
+                        <p class="note">デモ環境は準備中です。公開後に「体験する」ボタンとデモ用ログインを掲載します。</p>
+                    </div>
+                </div>
+
+                <div class="project-card__actions">
+                    <a class="btn btn--primary is-disabled" aria-disabled="true">体験する（近日公開）</a>
+                    <a class="btn btn--ghost" href="#works">制作事例一覧に戻る</a>
+                </div>
+            </section>
+
+            <section class="project-card" id="work-attendance">
+                <header class="project-card__head">
+                    <h3 class="project-card__title">勤怠アプリ</h3>
+                    <span class="badge badge--pending" aria-label="準備中">準備中</span>
+                </header>
+
+                <p class="project-card__lead">
+                    スタッフの出退勤管理と修正申請・承認フローを実装した勤怠管理アプリです。<br>打刻機能、休憩記録、CSV出力機能を備え、管理者による承認フローを実現しています。
+                </p>
+
+                <!-- ギャラリー -->
+                <div class="slider" aria-label="画面紹介スライド">
+                    <div class="slider__viewport">
+                        <div class="slider__track">
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/attendance/start-work-button.png" alt="出勤入力画面：登録/ログイン導線">
+                                    <figcaption>ユーザー：出勤時間入力</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/attendance/attendance-register.png" alt="休憩・退勤時間入力">
+                                    <figcaption>ユーザー：休憩・退勤時間入力</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/attendance/user-list.png" alt="勤怠一覧">
+                                    <figcaption>ユーザー：勤怠一覧</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/attendance/user-detail.png" alt="勤怠詳細/修正/申請">
+                                    <figcaption>ユーザー：勤怠詳細/修正/申請</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/attendance/application-list.png" alt="申請一覧">
+                                    <figcaption>ユーザー：申請一覧</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/attendance/staff-list.png" alt="管理：ユーザー一覧">
+                                    <figcaption>管理：ユーザー一覧</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/attendance/csv-export.png" alt="管理：ユーザー詳細/CSV出力">
+                                    <figcaption>管理：ユーザー詳細/CSV出力</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/attendance/admin-attendance-request-detail.png" alt="管理：申請詳細/承認">
+                                    <figcaption>管理：申請詳細/承認</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 前へ / 次へ -->
+                    <div class="slider__nav">
+                        <button type="button" class="nav-btn nav-btn--prev" data-prev aria-label="前へ">‹</button>
+                        <button type="button" class="nav-btn nav-btn--next" data-next aria-label="次へ">›</button>
+                    </div>
+                </div>
+
+                <div class="project-card__cols">
+                    <div class="project-card__col">
+                        <h4>ユーザー機能</h4>
+                        <ul class="list">
+                            <li>出勤・退勤打刻（リアルタイム）</li>
+                            <li>休憩開始・終了記録</li>
+                            <li>勤怠履歴の閲覧（月次カレンダー）</li>
+                            <li>勤怠詳細表示</li>
+                            <li>勤怠データの修正申請</li>
+                            <li>申請一覧の確認（承認待ち/承認済み）</li>
+                        </ul>
+
+                        <h4>管理者機能</h4>
+                        <ul class="list">
+                            <li>スタッフ一覧表示</li>
+                            <li>日次勤怠一覧の確認</li>
+                            <li>スタッフ別月次勤怠の確認</li>
+                            <li>勤怠データの直接修正</li>
+                            <li>修正申請一覧の確認（承認待ち/承認済み）</li>
+                            <li>修正申請の承認・却下</li>
+                            <li>月別勤怠データのCSV出力</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-card__col">
+                        <h4>技術スタック</h4>
+                        <ul class="chips">
+                            <li>PHP 8.2 / Laravel 8.75</li>
+                            <li>MySQL 8.0</li>
+                            <li>Nginx</li>
+                            <li>Docker / Docker Compose</li>
+                            <li>Laravel Fortify (認証)</li>
+                        </ul>
+
+                        <h4>制作</h4>
+                        <p>プログラミングスクール課題（個人実装）</p>
+
+                        <h4>実装内容</h4>
+                        <p>フルスタック実装 / 認証機能 / 勤怠管理機能 / 申請・承認機能 / CSV出力 / Docker環境構築 / PHPUnit テスト</p>
+
+                        <h4>GitHub</h4>
+                        <p>
+                            <a href="https://github.com/ichiki925/attendance-app-demo" target="_blank" rel="noopener">
+                                バックエンド（Attendance App Demo）
+                            </a>
+                        </p>
+
+                        <p class="note">デモ環境は準備中です。公開後に「体験する」ボタンとデモ用ログインを掲載します。</p>
+                    </div>
+                </div>
+
+                <div class="project-card__actions">
+                    <a class="btn btn--primary is-disabled" aria-disabled="true">体験する（近日公開）</a>
+                    <a class="btn btn--ghost" href="#works">制作事例一覧に戻る</a>
+                </div>
+            </section>
+
+            <section class="project-card" id="work-flea-market-app">
+                <header class="project-card__head">
+                    <h3 class="project-card__title">フリマアプリ</h3>
+                    <span class="badge badge--complete" aria-label="準備中">準備中</span>
+                </header>
+
+                <p class="project-card__lead">
+                    個人間で商品を売買できるフリマアプリです。<br>出品・購入・チャット・レビュー機能を実装しています。
+                </p>
+
+                <!-- ギャラリー -->
+                <div class="slider" aria-label="画面紹介スライド">
+                    <div class="slider__viewport">
+                        <div class="slider__track">
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/flea-market-app/top.png" alt="トップページ">
+                                    <figcaption>トップページ：商品一覧</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/flea-market-app/item-detail.png" alt="商品詳細">
+                                    <figcaption>商品詳細：いいね・コメント</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/flea-market-app/mypage.png" alt="マイページ">
+                                    <figcaption>マイページ：出品・購入・取引中</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/flea-market-app/sell.png" alt="出品ページ">
+                                    <figcaption>出品ページ：商品登録</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/flea-market-app/purchase.png" alt="購入ページ">
+                                    <figcaption>購入ページ：支払い方法選択</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/flea-market-app/chat.png" alt="チャット">
+                                    <figcaption>チャット：取引相手とメッセージ</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/flea-market-app/review.png" alt="レビュー">
+                                    <figcaption>レビュー：取引完了後の評価</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/flea-market-app/profile.png" alt="プロフィール編集">
+                                    <figcaption>プロフィール編集</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 前へ / 次へ -->
+                    <div class="slider__nav">
+                        <button type="button" class="nav-btn nav-btn--prev" data-prev aria-label="前へ">‹</button>
+                        <button type="button" class="nav-btn nav-btn--next" data-next aria-label="次へ">›</button>
+                    </div>
+                </div>
+
+                <div class="project-card__cols">
+                    <div class="project-card__col">
+                        <h4>ユーザー機能</h4>
+                        <ul class="list">
+                            <li>会員登録・ログイン（メール認証）</li>
+                            <li>商品の出品（画像・カテゴリー・コンディション）</li>
+                            <li>商品の検索・閲覧</li>
+                            <li>いいね機能（マイリスト）</li>
+                            <li>コメント機能</li>
+                            <li>商品購入（住所入力・支払い方法選択）</li>
+                            <li>取引チャット（画像送信・編集・削除）</li>
+                            <li>プロフィール編集（画像・住所）</li>
+                            <li>マイページ（出品商品・購入商品・取引中）</li>
+                            <li>レビュー機能（5段階評価）</li>
+                        </ul>
+
+                        <h4>決済機能</h4>
+                        <ul class="list">
+                            <li>Stripe連携（カード決済）</li>
+                            <li>コンビニ決済対応</li>
+                        </ul>
+
+                        <h4>技術スタック</h4>
+                        <ul class="chips">
+                            <li>PHP 7.4 / Laravel 8.75</li>
+                            <li>MySQL 8.0</li>
+                            <li>Laravel Fortify (認証)</li>
+                            <li>Laravel Storage (画像保存)</li>
+                            <li>MailHog (メール送信)</li>
+                            <li>Stripe API</li>
+                            <li>Nginx</li>
+                            <li>Docker / Docker Compose</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-card__col">
+                        <h4>制作</h4>
+                        <p>プログラミングスクール課題（個人実装）</p>
+
+                        <h4>実装内容</h4>
+                        <p>フルスタック実装 / 認証機能 / Stripe決済連携 / チャット機能 / レビュー機能 / Docker環境構築 / PHPUnit テスト</p>
+
+                        <h4>GitHub</h4>
+                        <p>
+                            <a href="https://github.com/ichiki925/flea-market-app-demo" target="_blank" rel="noopener">
+                                フリマアプリ（Flea Market App）
+                            </a>
+                        </p>
+
+                        <h4>こだわりポイント</h4>
+                        <ul class="list">
+                            <li>日本語対応のバリデーション（ひらがな・カタカナ・漢字）</li>
+                            <li>レスポンシブ対応（スマホ・タブレット）</li>
+                            <li>体験版実装（デモログイン・自動リセット機能）</li>
+                            <li>チャット機能（画像送信・編集・削除）</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card__actions">
+                    <a class="btn btn--primary" href="http://your-demo-url.com" target="_blank" rel="noopener">体験する</a>
+                    <a class="btn btn--ghost" href="#works">制作事例一覧に戻る</a>
+                </div>
+            </section>
+
+            <section class="project-card" id="work-share">
+                <header class="project-card__head">
+                    <h3 class="project-card__title">SHARE(Twitter風SNSアプリ)</h3>
+                    <span class="badge badge--pending" aria-label="準備中">準備中</span>
+                </header>
+
+                <p class="project-card__lead">
+                    投稿・いいね・コメント機能を実装したTwitter風SNSアプリです。<br>Firebase認証とリアルタイム更新で、ユーザー同士のコミュニケーションを実現しています。
+                </p>
+
+                <!-- ギャラリー -->
+                <div class="slider" aria-label="画面紹介スライド">
+                    <div class="slider__viewport">
+                        <div class="slider__track">
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/share-app/register.png" alt="新規登録ページ">
+                                    <figcaption>新規登録ページ</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/share-app/login.png" alt="ログインページ">
+                                    <figcaption>ログインページ</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/share-app/home.png" alt="タイムライン">
+                                    <figcaption>タイムライン：投稿一覧</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/share-app/comment.png" alt="コメント投稿">
+                                    <figcaption>コメント投稿ページ</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 前へ / 次へ -->
+                    <div class="slider__nav">
+                        <button type="button" class="nav-btn nav-btn--prev" data-prev aria-label="前へ">‹</button>
+                        <button type="button" class="nav-btn nav-btn--next" data-next aria-label="次へ">›</button>
+                    </div>
+                </div>
+
+                <div class="project-card__cols">
+                    <div class="project-card__col">
+                        <h4>ユーザー機能</h4>
+                        <ul class="list">
+                            <li>会員登録・ログイン（Firebase Authentication）</li>
+                            <li>投稿の作成・表示・削除</li>
+                            <li>タイムライン（投稿一覧表示）</li>
+                            <li>ユーザー別投稿一覧</li>
+                            <li>いいね機能（追加・削除）</li>
+                            <li>いいね状態の確認</li>
+                            <li>コメント機能（投稿・一覧表示）</li>
+                            <li>投稿詳細表示</li>
+                        </ul>
+
+                        <h4>デモ機能</h4>
+                        <ul class="list">
+                            <li>デモデータ自動リセット機能</li>
+                            <li>デモ専用環境設定</li>
+                        </ul>
+
+                        <h4>技術スタック</h4>
+                        <ul class="chips">
+                            <li>TypeScript 5.x</li>
+                            <li>React 18</li>
+                            <li>Next.js 14.2</li>
+                            <li>Firebase 12.2 (Authentication)</li>
+                            <li>PHP 8.1 / Laravel 8.75</li>
+                            <li>Firebase PHP SDK 6.4</li>
+                            <li>MySQL 8.0</li>
+                            <li>Nginx 1.21</li>
+                            <li>Docker / Docker Compose</li>
+                        </ul>
+                    </div>
+
+                    <div class="project-card__col">
+                        <h4>制作</h4>
+                        <p>個人実装</p>
+
+                        <h4>実装内容</h4>
+                        <p>要件定義 / UI設計 / フロントエンド実装（Next.js/TypeScript） / バックエンド実装（Laravel RESTful API） / Firebase認証連携 / いいね・コメント機能 / デモ環境構築 /
+                            Docker環境構築</p>
+
+                        <h4>GitHub</h4>
+                        <p>
+                            <a href="https://github.com/ichiki925/share-app-react-demo" target="_blank" rel="noopener">
+                                SHARE（Twitter風SNSアプリ）
+                            </a>
+                        </p>
+
+                        <h4>こだわりポイント</h4>
+                        <ul class="list">
+                            <li>Firebase Authenticationによる安全な認証</li>
+                            <li>Next.js App Routerを使用したモダンな設計</li>
+                            <li>TypeScriptによる型安全な実装</li>
+                            <li>RESTful APIによるフロント・バック分離</li>
+                            <li>デモ用自動リセット機能の実装</li>
+                        </ul>
+
+                        <p class="note">デモ環境は準備中です。公開後に「体験する」ボタンとデモ用ログインを掲載します。</p>
+                    </div>
+                </div>
+
+                <div class="project-card__actions">
+                    <a class="btn btn--primary is-disabled" aria-disabled="true">体験する（近日公開）</a>
+                    <a class="btn btn--ghost" href="#works">制作事例一覧に戻る</a>
+                </div>
+            </section>
+
+            <section id="skill" class="section">
+                <h2>SKILL</h2>
+
+                <div class="skill-category">
+                    <h3>Language</h3>
+                    <div class="skill-icons">
+                        <div class="skill-item">
+                            <i class="devicon-javascript-plain colored"></i>
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-typescript-plain colored"></i>
+                            <p>TypeScript</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-php-plain colored"></i>
+                            <p>PHP</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-html5-plain colored"></i>
+                            <p>HTML5/CSS3</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Framework</h3>
+                    <div class="skill-icons">
+                        <div class="skill-item">
+                            <i class="devicon-laravel-plain colored"></i>
+                            <p>Laravel</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-vuejs-plain colored"></i>
+                            <p>Vue.js</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-nuxtjs-plain colored"></i>
+                            <p>Nuxt.js</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-react-original colored"></i>
+                            <p>React</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-nextjs-plain"></i>
+                            <p>Next.js</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Database</h3>
+                    <div class="skill-icons">
+                        <div class="skill-item">
+                            <i class="devicon-mysql-plain colored"></i>
+                            <p>MySQL</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Infrastructure / Tools</h3>
+                    <div class="skill-icons">
+                        <div class="skill-item">
+                            <i class="devicon-docker-plain colored"></i>
+                            <p>Docker</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-git-plain colored"></i>
+                            <p>Git</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-github-original"></i>
+                            <p>GitHub</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-firebase-plain colored"></i>
+                            <p>Firebase</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="devicon-nginx-original colored"></i>
+                            <p>Nginx</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="section">
+                <h2>ABOUT</h2>
+
+                <div class="about-container">
+                    <div class="about-profile">
+                        <img src="images/profile.jpg" alt="K.Ichiki" class="profile-image">
+                    </div>
+
+                    <div class="about-content">
+                        <h3 class="about-name">K.Ichiki</h3>
+
+                        <p class="about-description">
+                            Webアプリケーション開発を行っています。JavaScript/TypeScript、PHP、React、Next.js、Vue.js、Nuxt.js、Laravelなどを扱い、フルスタック開発に対応しています。
+                        </p>
+
+                        <p class="about-attitude">
+                            ユーザーが使いやすいアプリケーション作りを心がけ、セキュリティや細部の実装にもこだわっています。
+                        </p>
+
+                        <div class="about-links">
+                            <a href="https://github.com/ichiki925" target="_blank" rel="noopener">
+                                <i class="devicon-github-original"></i> Github
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </section>
 
         <section id="contact" class="section">
@@ -60,6 +677,76 @@
     </main>
 
     <footer class="site-footer">© K.Ichiki</footer>
+
+    <script>
+        (() => {
+            const root = document.querySelector('#work-vanilla .slider');
+            if (!root) return;
+            const track = root.querySelector('.slider__track');
+            const slides = Array.from(track.children);
+            const prev = root.querySelector('[data-prev]');
+            const next = root.querySelector('[data-next]');
+            let index = 0;
+
+            function go(n) {
+                index = (n + slides.length) % slides.length;
+                slides[index].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+            }
+            prev.addEventListener('click', () => go(index - 1));
+            next.addEventListener('click', () => go(index + 1));
+        })();
+
+        (() => {
+                const root = document.querySelector('#work-attendance .slider');
+                if (!root) return;
+                const track = root.querySelector('.slider__track');
+                const slides = Array.from(track.children);
+                const prev = root.querySelector('[data-prev]');
+                const next = root.querySelector('[data-next]');
+                let index = 0;
+
+                function go(n) {
+                    index = (n + slides.length) % slides.length;
+                    slides[index].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+                }
+                prev.addEventListener('click', () => go(index - 1));
+                next.addEventListener('click', () => go(index + 1));
+            })();
+
+        (() => {
+                const root = document.querySelector('#work-flea-market-app .slider');
+                if (!root) return;
+                const track = root.querySelector('.slider__track');
+                const slides = Array.from(track.children);
+                const prev = root.querySelector('[data-prev]');
+                const next = root.querySelector('[data-next]');
+                let index = 0;
+
+                function go(n) {
+                    index = (n + slides.length) % slides.length;
+                    slides[index].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+                }
+                prev.addEventListener('click', () => go(index - 1));
+                next.addEventListener('click', () => go(index + 1));
+            })();
+
+        (() => {
+                const root = document.querySelector('#work-share .slider');
+                if (!root) return;
+                const track = root.querySelector('.slider__track');
+                const slides = Array.from(track.children);
+                const prev = root.querySelector('[data-prev]');
+                const next = root.querySelector('[data-next]');
+                let index = 0;
+
+                function go(n) {
+                    index = (n + slides.length) % slides.length;
+                    slides[index].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+                }
+                prev.addEventListener('click', () => go(index - 1));
+                next.addEventListener('click', () => go(index + 1));
+            })();
+    </script>
 </body>
 
 </html>
