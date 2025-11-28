@@ -306,16 +306,6 @@ a:visited {
     font-weight: 400 !important;
 }
 
-.theme-5 .btn {
-    color: #ffffff !important;
-    border-color: rgba(255, 255, 255, 0.6) !important;
-    background: rgba(255, 255, 255, 0.1) !important;
-}
-
-.theme-5 .btn:hover {
-    background: rgba(255, 255, 255, 0.2) !important;
-}
-
 /* theme-5-option1: フォントを太くする */
 .theme-5-option1 .hero--compact .catch {
     font-weight: 700 !important;
@@ -619,6 +609,20 @@ a:visited {
     box-sizing: border-box;
 }
 
+.project-card__title {
+    font-size: 1.8rem;
+    margin-top: 4rem;
+    /* 元のサイズより少し大きく */
+}
+
+/* 説明の見出し（ユーザー機能、決済機能など）を大きく */
+.project-card__col h4 {
+    font-size: 1.2rem;
+    /* 元のサイズより少し大きく */
+    margin-bottom: 0.5rem;
+    margin-top: 1.5rem;
+}
+
 .project-card__col h4 {
     margin-bottom: 0.5rem;
     margin-top: 1.5rem;
@@ -626,6 +630,19 @@ a:visited {
 
 .project-card__col h4:first-of-type {
     margin-top: 0;
+}
+
+.project-card__col h4+* {
+    margin-top: 0.1rem;
+}
+
+.project-card__col a {
+    color: #1976d2 !important;
+    text-decoration: underline !important;
+}
+
+.project-card__col a:hover {
+    color: #1565c0 !important;
 }
 
 .section {

@@ -53,7 +53,6 @@
             <section class="project-card" id="work-vanilla">
                 <header class="project-card__head">
                     <h3 class="project-card__title">Vanilla's Kitchen（レシピアプリ・デモ）</h3>
-                    <span class="badge badge--pending" aria-label="準備中">準備中</span>
                 </header>
 
                 <p class="project-card__lead">
@@ -142,9 +141,7 @@
                             <li>ユーザー数カウント表示</li>
                             <li>最近更新・最近削除の可視化</li>
                         </ul>
-                    </div>
 
-                    <div class="project-card__col">
                         <h4>技術スタック</h4>
                         <ul class="chips">
                             <li>JavaScript (ES2020+)</li>
@@ -160,7 +157,9 @@
 
                         <h4>実装内容</h4>
                         <p>要件定義 / UI設計 / フロントエンド実装 / バックエンド実装 / Firebase連携 / Docker環境構築 / デプロイ / 運用</p>
+                    </div>
 
+                    <div class="project-card__col">
                         <h4>GitHub</h4>
                         <p>
                             <a href="https://github.com/ichiki925/recipe-app-demo" target="_blank" rel="noopener">
@@ -168,20 +167,39 @@
                             </a>
                         </p>
 
-                        <p class="note">デモ環境は準備中です。公開後に「体験する」ボタンとデモ用ログインを掲載します。</p>
-                    </div>
-                </div>
+                        <h4>アプリURL</h4>
+                        <p>
+                            <strong>ユーザー側：</strong><br>
+                            <a href="https://vanilla.k-ichiki.com/auth/login" target="_blank" rel="noopener">
+                                https://vanilla.k-ichiki.com/auth/login
+                            </a>
+                        </p>
+                        <p>「🔑デモアカウントでログイン」ボタンからアプリを体験することができます。</p>
 
-                <div class="project-card__actions">
-                    <a class="btn btn--primary is-disabled" aria-disabled="true">体験する(近日公開)</a>
-                    <a class="btn btn--ghost" href="#works">制作事例一覧に戻る</a>
+                        <p>
+                            <strong>管理者側：</strong><br>
+                            <a href="https://vanilla.k-ichiki.com/admin/login" target="_blank" rel="noopener">
+                                https://vanilla.k-ichiki.com/admin/login
+                            </a>
+                        </p>
+                        <p>「🔑デモ管理者でログイン」ボタンから管理機能を体験することができます。</p>
+
+                        <h4>こだわりポイント</h4>
+                        <ul class="list">
+                            <li>複数キーワード検索対応(「味噌汁 野菜」のようにスペース区切りで検索)</li>
+                            <li>日本語読み仮名検索(「みそしる」で「味噌汁」を検索可能)</li>
+                            <li>日本語対応のバリデーション(ひらがな・カタカナ・漢字・長音記号「ー」)</li>
+                            <li>Firebase認証とストレージの連携</li>
+                            <li>レスポンシブ対応(スマホ・タブレット)</li>
+                            <li>デモログイン機能(自動ログイン・データリセット)</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
 
             <section class="project-card" id="work-attendance">
                 <header class="project-card__head">
                     <h3 class="project-card__title">勤怠アプリ</h3>
-                    <span class="badge badge--pending" aria-label="準備中">準備中</span>
                 </header>
 
                 <p class="project-card__lead">
@@ -272,9 +290,7 @@
                             <li>修正申請の承認・却下</li>
                             <li>月別勤怠データのCSV出力</li>
                         </ul>
-                    </div>
 
-                    <div class="project-card__col">
                         <h4>技術スタック</h4>
                         <ul class="chips">
                             <li>PHP 8.2 / Laravel 8.75</li>
@@ -286,7 +302,9 @@
 
                         <h4>制作</h4>
                         <p>プログラミングスクール課題(個人実装)</p>
+                    </div>
 
+                    <div class="project-card__col">
                         <h4>実装内容</h4>
                         <p>フルスタック実装 / 認証機能 / 勤怠管理機能 / 申請・承認機能 / CSV出力 / Docker環境構築 / PHPUnit テスト</p>
 
@@ -297,20 +315,41 @@
                             </a>
                         </p>
 
-                        <p class="note">デモ環境は準備中です。公開後に「体験する」ボタンとデモ用ログインを掲載します。</p>
+                        <h4>アプリURL</h4>
+                        <p>
+                            <strong>ユーザー側：</strong><br>
+                            <a href="https://attendance.k-ichiki.com/login" target="_blank" rel="noopener">
+                                https://attendance.k-ichiki.com/login
+                            </a>
+                        </p>
+                        <p>「一般ユーザーでログイン」ボタンからアプリを体験することができます。</p>
+
+                        <p>
+                            <strong>管理者側：</strong><br>
+                            <a href="https://attendance.k-ichiki.com/admin/login" target="_blank" rel="noopener">
+                                https://attendance.k-ichiki.com/admin/login
+                            </a>
+                        </p>
+                        <p>「管理者デモでログイン」ボタンから管理機能を体験することができます。</p>
+
+                        <h4>こだわりポイント</h4>
+                        <ul class="list">
+                            <li>リアルタイム打刻機能（出勤・休憩・退勤）</li>
+                            <li>修正申請・承認フローの実装</li>
+                            <li>月別勤怠データのCSV出力（UTF-8/Shift-JIS対応）</li>
+                            <li>Laravel Fortifyによる安全な認証</li>
+                            <li>レスポンシブ対応（スマホ・タブレット）</li>
+                            <li>デモログイン機能（自動ログイン・データリセット）</li>
+                        </ul>
                     </div>
                 </div>
 
-                <div class="project-card__actions">
-                    <a class="btn btn--primary is-disabled" aria-disabled="true">体験する(近日公開)</a>
-                    <a class="btn btn--ghost" href="#works">制作事例一覧に戻る</a>
-                </div>
+
             </section>
 
             <section class="project-card" id="work-flea-market-app">
                 <header class="project-card__head">
                     <h3 class="project-card__title">フリマアプリ</h3>
-                    <span class="badge badge--complete" aria-label="準備中">準備中</span>
                 </header>
 
                 <p class="project-card__lead">
@@ -428,6 +467,13 @@
                             </a>
                         </p>
 
+                        <h4>アプリURL</h4>
+                        <p>
+                            <a href="https://flea.k-ichiki.com" target="_blank" rel="noopener">https://flea.k-ichiki.com</a>
+                        </p>
+                        <p>「かんたんログイン」ボタンからアプリを体験することができます。</p>
+                        <p>※ デモ用アカウントで自動ログインします（メールアドレス: demo@example.com）</p>
+
                         <h4>こだわりポイント</h4>
                         <ul class="list">
                             <li>日本語対応のバリデーション(ひらがな・カタカナ・漢字)</li>
@@ -438,16 +484,11 @@
                     </div>
                 </div>
 
-                <div class="project-card__actions">
-                    <a class="btn btn--primary" href="http://your-demo-url.com" target="_blank" rel="noopener">体験する</a>
-                    <a class="btn btn--ghost" href="#works">制作事例一覧に戻る</a>
-                </div>
             </section>
 
             <section class="project-card" id="work-share">
                 <header class="project-card__head">
                     <h3 class="project-card__title">SHARE(Twitter風SNSアプリ)</h3>
-                    <span class="badge badge--pending" aria-label="準備中">準備中</span>
                 </header>
 
                 <p class="project-card__lead">
@@ -524,12 +565,12 @@
                             <li>Nginx 1.21</li>
                             <li>Docker / Docker Compose</li>
                         </ul>
+
+                        <h4>制作</h4>
+                        <p>個人実装</p>
                     </div>
 
                     <div class="project-card__col">
-                        <h4>制作</h4>
-                        <p>個人実装</p>
-
                         <h4>実装内容</h4>
                         <p>要件定義 / UI設計 / フロントエンド実装(Next.js/TypeScript) / バックエンド実装(Laravel RESTful API) / Firebase認証連携 /
                             いいね・コメント機能 / デモ環境構築 /
@@ -542,22 +583,26 @@
                             </a>
                         </p>
 
+                        <h4>アプリURL</h4>
+                        <p>
+                            <a href="https://share.k-ichiki.com" target="_blank" rel="noopener">
+                                https://share.k-ichiki.com
+                            </a>
+                        </p>
+                        <p>「🔑 デモアカウントでログイン」から「デモユーザー1でログイン」ボタンでアプリを体験できます。</p>
+                        <p>※ デモ用アカウントで自動ログインし、ログイン時に投稿データが自動リセットされます</p>
+
                         <h4>こだわりポイント</h4>
                         <ul class="list">
+                            <li>Vue.js版からReact/Next.js + TypeScriptへの技術移行</li>
                             <li>Firebase Authenticationによる安全な認証</li>
                             <li>Next.js App Routerを使用したモダンな設計</li>
                             <li>TypeScriptによる型安全な実装</li>
                             <li>RESTful APIによるフロント・バック分離</li>
-                            <li>デモ用自動リセット機能の実装</li>
+                            <li>デモログイン機能（自動ログイン・データリセット）</li>
+                            <li>レスポンシブ対応（スマホ・タブレット）</li>
                         </ul>
-
-                        <p class="note">デモ環境は準備中です。公開後に「体験する」ボタンとデモ用ログインを掲載します。</p>
                     </div>
-                </div>
-
-                <div class="project-card__actions">
-                    <a class="btn btn--primary is-disabled" aria-disabled="true">体験する(近日公開)</a>
-                    <a class="btn btn--ghost" href="#works">制作事例一覧に戻る</a>
                 </div>
             </section>
 
