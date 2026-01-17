@@ -185,6 +185,7 @@ a:visited {
     max-width: min(1100px, 90vw);
     padding: clamp(16px, 4vw, 40px);
     box-sizing: border-box;
+    text-align: center;
 }
 
 .theme-4 .hero::before {
@@ -278,7 +279,7 @@ a:visited {
 }
 
 /* theme-5: 中央にテキストを配置 */
-.theme-5.hero {
+.theme-5 .hero {
     justify-items: center;
 }
 
@@ -334,6 +335,16 @@ a:visited {
 /* theme-5-option4: 背景にオーバーレイ追加 */
 .theme-5-option4 .hero::before {
     filter: brightness(0.75) !important;
+}
+
+.theme-5 .hero .hero__inner {
+    margin: 0 auto !important;
+    transform: none !important;
+    text-align: center !important;
+    max-width: min(60ch, 90vw) !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* アイブロウ */
