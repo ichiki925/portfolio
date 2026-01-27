@@ -608,6 +608,129 @@
                 </div>
             </section>
 
+            <section class="project-card" id="work-timebook">
+                <header class="project-card__head">
+                    <h3 class="project-card__title">TimeBook（ピアノ教室予約システム）</h3>
+                </header>
+
+                <p class="project-card__lead">
+                    ピアノ教室の生徒がレッスン枠を予約できるシステムです。<br>
+                    管理者側でレッスン枠を設定し、生徒が空き状況を確認して予約・キャンセルができます。<br>
+                    <strong>現在、実際に運用中のシステムです。</strong>
+                </p>
+
+                <!-- ギャラリー -->
+                <div class="slider" aria-label="画面紹介スライド">
+                    <div class="slider__viewport">
+                        <div class="slider__track">
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/timebook/calendar-pc.png" alt="レッスン予約カレンダー">
+                                    <figcaption>生徒:レッスン予約カレンダー</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/timebook/reservation-history.png" alt="予約履歴">
+                                    <figcaption>生徒:予約履歴</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/timebook/calendar-mobile.png" alt="カレンダー（スマホ表示）">
+                                    <figcaption>スマホ:レッスン予約カレンダー</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/timebook/admin-dashboard.png" alt="管理者ダッシュボード">
+                                    <figcaption>管理:ダッシュボード</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/timebook/admin-lesson-manage.png" alt="レッスン枠管理">
+                                    <figcaption>管理:レッスン枠管理</figcaption>
+                                </figure>
+                            </div>
+                            <div class="slide">
+                                <figure>
+                                    <img src="images/timebook/admin-reservation-manage.png" alt="予約管理">
+                                    <figcaption>管理:予約管理</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 前へ / 次へ -->
+                    <div class="slider__nav">
+                        <button type="button" class="nav-btn nav-btn--prev" data-prev aria-label="前へ">‹</button>
+                        <button type="button" class="nav-btn nav-btn--next" data-next aria-label="次へ">›</button>
+                    </div>
+                </div>
+
+                <div class="project-card__cols">
+                    <div class="project-card__col">
+                        <h4>生徒機能</h4>
+                        <ul class="list">
+                            <li>レッスン枠一覧表示（週単位カレンダー）</li>
+                            <li>空き状況の確認（予約可・予約済・予約不可）</li>
+                            <li>レッスン枠の予約</li>
+                            <li>予約のキャンセル</li>
+                            <li>予約履歴の確認</li>
+                            <li>レスポンシブ対応（スマホ・タブレット）</li>
+                        </ul>
+
+                        <h4>管理者機能</h4>
+                        <ul class="list">
+                            <li>レッスン枠の作成・編集・削除</li>
+                            <li>一括作成機能（定期的なレッスン枠の登録）</li>
+                            <li>予約状況の一覧表示</li>
+                            <li>予約の確認・管理</li>
+                            <li>ダッシュボード（今日の予約・月次予約数）</li>
+                        </ul>
+
+                        <h4>技術スタック</h4>
+                        <ul class="chips">
+                            <li>JavaScript (ES2020+)</li>
+                            <li>Vue 3 / Nuxt 4</li>
+                            <li>PHP 8.3 / Laravel 11</li>
+                            <li>MySQL 8.0</li>
+                            <li>Docker / Docker Compose</li>
+                        </ul>
+
+                        <h4>制作</h4>
+                        <p>個人開発・運用中</p>
+                    </div>
+
+                    <div class="project-card__col">
+                        <h4>実装内容</h4>
+                        <p>要件定義 / UI設計 / フロントエンド実装 / バックエンド実装 / データベース設計 / Docker環境構築 / デプロイ / 運用・保守</p>
+                        <h4>GitHub</h4>
+                        <p>
+                            <a href="https://github.com/ichiki925/timebook" target="_blank" rel="noopener">
+                                TimeBook（予約システム）
+                            </a>
+                        </p>
+
+                        <h4>アプリURL</h4>
+                        <p class="note">
+                            ※ 個人情報保護のため、URLの公開は控えさせていただいております。<br>
+                            スクリーンショットで機能をご確認ください。
+                        </p>
+
+                        <h4>こだわりポイント</h4>
+                        <ul class="list">
+                            <li>週単位カレンダーで直感的に予約可能</li>
+                            <li>曜日ごとの色分けで視覚的に分かりやすい表示</li>
+                            <li>管理者の一括作成機能で効率的な運用</li>
+                            <li>レスポンシブ対応（スマホ・タブレット）</li>
+                            <li>実際のピアノ教室で運用中（実務経験）</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
             <section id="skill" class="section">
                 <h2>SKILL</h2>
 
@@ -727,7 +850,7 @@
 
         <section id="contact" class="section">
             <h2>お問い合わせ</h2>
-            <p>メールアドレスやフォームへのリンクを配置。</p>
+            <p>✉︎ spectafilm925@gmail.com</p>
         </section>
     </main>
 
@@ -735,71 +858,25 @@
 
     <script>
         (() => {
-            const root = document.querySelector('#work-vanilla .slider');
-            if (!root) return;
-            const track = root.querySelector('.slider__track');
-            const slides = Array.from(track.children);
-            const prev = root.querySelector('[data-prev]');
-            const next = root.querySelector('[data-next]');
-            let index = 0;
+            document.querySelectorAll('.project-card .slider').forEach((root) => {
+                const track = root.querySelector('.slider__track');
+                if (!track) return;
 
-            function go(n) {
-                index = (n + slides.length) % slides.length;
-                slides[index].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
-            }
-            prev.addEventListener('click', () => go(index - 1));
-            next.addEventListener('click', () => go(index + 1));
-        })();
+                const slides = Array.from(track.children);
+                const prev = root.querySelector('[data-prev]');
+                const next = root.querySelector('[data-next]');
+                if (!slides.length || !prev || !next) return;
 
-        (() => {
-            const root = document.querySelector('#work-attendance .slider');
-            if (!root) return;
-            const track = root.querySelector('.slider__track');
-            const slides = Array.from(track.children);
-            const prev = root.querySelector('[data-prev]');
-            const next = root.querySelector('[data-next]');
-            let index = 0;
+                let index = 0;
 
-            function go(n) {
-                index = (n + slides.length) % slides.length;
-                slides[index].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
-            }
-            prev.addEventListener('click', () => go(index - 1));
-            next.addEventListener('click', () => go(index + 1));
-        })();
+                function go(n) {
+                    index = (n + slides.length) % slides.length;
+                    slides[index].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
+                }
 
-        (() => {
-            const root = document.querySelector('#work-flea-market-app .slider');
-            if (!root) return;
-            const track = root.querySelector('.slider__track');
-            const slides = Array.from(track.children);
-            const prev = root.querySelector('[data-prev]');
-            const next = root.querySelector('[data-next]');
-            let index = 0;
-
-            function go(n) {
-                index = (n + slides.length) % slides.length;
-                slides[index].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
-            }
-            prev.addEventListener('click', () => go(index - 1));
-            next.addEventListener('click', () => go(index + 1));
-        })();
-
-        (() => {
-            const root = document.querySelector('#work-share .slider');
-            if (!root) return;
-            const track = root.querySelector('.slider__track');
-            const slides = Array.from(track.children);
-            const prev = root.querySelector('[data-prev]');
-            const next = root.querySelector('[data-next]');
-            let index = 0;
-
-            function go(n) {
-                index = (n + slides.length) % slides.length;
-                slides[index].scrollIntoView({ behavior: 'smooth', inline: 'start', block: 'nearest' });
-            }
-            prev.addEventListener('click', () => go(index - 1));
-            next.addEventListener('click', () => go(index + 1));
+                prev.addEventListener('click', () => go(index - 1));
+                next.addEventListener('click', () => go(index + 1));
+            });
         })();
     </script>
 </body>
