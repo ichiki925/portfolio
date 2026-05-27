@@ -58,7 +58,7 @@
                 </header>
 
                 <p class="project-card__lead">
-                    管理者が投稿するレシピを、会員ユーザーが閲覧・お気に入り・コメントできるアプリです。<br>Firebase認証とストレージ、Laravel API、Nuxt
+                    管理者が投稿するレシピを、会員ユーザーが閲覧・お気に入り・コメントできるアプリです。Firebase認証とストレージ、Laravel API、Nuxt
                     3で構成し、PC/スマホに最適化しています。
                 </p>
 
@@ -205,7 +205,8 @@
                 </header>
 
                 <p class="project-card__lead">
-                    スタッフの出退勤管理と修正申請・承認フローを実装した勤怠管理アプリです。<br>打刻機能、休憩記録、CSV出力機能を備え、管理者による承認フローを実現しています。
+                    締め日設定・丸め処理・勤務パターン・勤怠区分など細かい設定を管理者が自由にカスタマイズできます。
+                    PDF出力・請求書メール送信・代理入力・現場リーダー承認など、実務を想定した機能を段階的に実装しました。
                 </p>
 
                 <!-- ギャラリー -->
@@ -214,50 +215,50 @@
                         <div class="slider__track">
                             <div class="slide">
                                 <figure>
-                                    <img src="images/attendance/start-work-button.png" alt="出勤入力画面:登録/ログイン導線">
-                                    <figcaption>ユーザー:出勤時間入力</figcaption>
+                                    <img src="images/attendance/attendance-register.png" alt="打刻画面">
+                                    <figcaption>ユーザー:打刻画面</figcaption>
                                 </figure>
                             </div>
                             <div class="slide">
                                 <figure>
-                                    <img src="images/attendance/attendance-register.png" alt="休憩・退勤時間入力">
-                                    <figcaption>ユーザー:休憩・退勤時間入力</figcaption>
+                                    <img src="images/attendance/staff-list.png" alt="スタッフ一覧">
+                                    <figcaption>管理:スタッフ一覧（時給管理）</figcaption>
                                 </figure>
                             </div>
                             <div class="slide">
                                 <figure>
-                                    <img src="images/attendance/user-list.png" alt="勤怠一覧">
-                                    <figcaption>ユーザー:勤怠一覧</figcaption>
+                                    <img src="images/attendance/start-work-button.png" alt="勤務パターン設定">
+                                    <figcaption>管理:勤務パターン設定</figcaption>
                                 </figure>
                             </div>
                             <div class="slide">
                                 <figure>
-                                    <img src="images/attendance/user-detail.png" alt="勤怠詳細/修正/申請">
-                                    <figcaption>ユーザー:勤怠詳細/修正/申請</figcaption>
+                                    <img src="images/attendance/user-detail.png" alt="勤怠区分設定">
+                                    <figcaption>管理:勤怠区分設定</figcaption>
                                 </figure>
                             </div>
                             <div class="slide">
                                 <figure>
-                                    <img src="images/attendance/application-list.png" alt="申請一覧">
-                                    <figcaption>ユーザー:申請一覧</figcaption>
+                                    <img src="images/attendance/user-list.png" alt="締め日設定">
+                                    <figcaption>管理:締め日設定</figcaption>
                                 </figure>
                             </div>
                             <div class="slide">
                                 <figure>
-                                    <img src="images/attendance/staff-list.png" alt="管理:ユーザー一覧">
-                                    <figcaption>管理:ユーザー一覧</figcaption>
+                                    <img src="images/attendance/admin-attendance-request-detail.png" alt="リーダー承認設定">
+                                    <figcaption>管理:リーダー承認設定</figcaption>
                                 </figure>
                             </div>
                             <div class="slide">
                                 <figure>
-                                    <img src="images/attendance/csv-export.png" alt="管理:ユーザー詳細/CSV出力">
-                                    <figcaption>管理:ユーザー詳細/CSV出力</figcaption>
+                                    <img src="images/attendance/application-list.png" alt="代理入力">
+                                    <figcaption>管理:代理入力</figcaption>
                                 </figure>
                             </div>
                             <div class="slide">
                                 <figure>
-                                    <img src="images/attendance/admin-attendance-request-detail.png" alt="管理:申請詳細/承認">
-                                    <figcaption>管理:申請詳細/承認</figcaption>
+                                    <img src="images/attendance/csv-export.png" alt="PDF出力・請求書送信">
+                                    <figcaption>管理:PDF出力・請求書送信</figcaption>
                                 </figure>
                             </div>
                         </div>
@@ -274,75 +275,69 @@
                     <div class="project-card__col">
                         <h4>ユーザー機能</h4>
                         <ul class="list">
-                            <li>出勤・退勤打刻(リアルタイム)</li>
+                            <li>出勤・退勤打刻（リアルタイム）</li>
                             <li>休憩開始・終了記録</li>
-                            <li>勤怠履歴の閲覧(月次カレンダー)</li>
-                            <li>勤怠詳細表示</li>
+                            <li>勤怠区分・勤務パターン選択</li>
+                            <li>勤怠履歴の閲覧（月次一覧）</li>
                             <li>勤怠データの修正申請</li>
-                            <li>申請一覧の確認(承認待ち/承認済み)</li>
+                            <li>申請一覧の確認（承認待ち/承認済み）</li>
                         </ul>
 
                         <h4>管理者機能</h4>
                         <ul class="list">
-                            <li>スタッフ一覧表示</li>
-                            <li>日次勤怠一覧の確認</li>
-                            <li>スタッフ別月次勤怠の確認</li>
-                            <li>勤怠データの直接修正</li>
-                            <li>修正申請一覧の確認(承認待ち/承認済み)</li>
-                            <li>修正申請の承認・却下</li>
+                            <li>スタッフ一覧・時給管理</li>
+                            <li>締め日設定（15日・20日・末日など）</li>
+                            <li>丸め処理設定（1/5/10/15/30分・自由設定）</li>
+                            <li>勤務パターン登録（シフト自動入力補助）</li>
+                            <li>勤怠区分登録（欠勤・有給・休日出勤など）</li>
+                            <li>現場リーダー承認（シークレット番号による承認）</li>
+                            <li>代理入力（管理者がスタッフ分を入力）</li>
+                            <li>締め日ごとの集計・修正時メール通知</li>
+                            <li>PDF出力・請求書メール送信</li>
                             <li>月別勤怠データのCSV出力</li>
                         </ul>
 
                         <h4>技術スタック</h4>
                         <ul class="chips">
-                            <li>PHP 8.2 / Laravel 8.75</li>
+                            <li>PHP 8.2 / Laravel 11</li>
                             <li>MySQL 8.0</li>
                             <li>Nginx</li>
                             <li>Docker / Docker Compose</li>
-                            <li>Laravel Fortify (認証)</li>
+                            <li>Laravel Fortify（認証）</li>
+                            <li>MailHog（メール確認）</li>
                         </ul>
 
-                        <h4>制作</h4>
-                        <p>プログラミングスクール課題(個人実装)</p>
                     </div>
 
                     <div class="project-card__col">
                         <h4>実装内容</h4>
-                        <p>フルスタック実装 / 認証機能 / 勤怠管理機能 / 申請・承認機能 / CSV出力 / Docker環境構築 / PHPUnit テスト</p>
+                        <p>フルスタック実装 / 認証機能 / 勤怠打刻・集計 / 深夜・残業・休日出勤計算 / 丸め処理 / 締め日集計 / 承認フロー / 代理入力 / PDF出力 / 請求書メール送信 / Docker環境構築 /
+                            レスポンシブ対応</p>
 
                         <h4>GitHub</h4>
                         <p>
-                            <a href="https://github.com/ichiki925/attendance-app-demo" target="_blank" rel="noopener">
-                                バックエンド(Attendance App Demo)
+                            <a href="https://github.com/ichiki925/attendance-app" target="_blank" rel="noopener">
+                                バックエンド（AttendTrack）
                             </a>
                         </p>
 
                         <h4>アプリURL</h4>
-                        <p>
-                            <strong>ユーザー側：</strong><br>
-                            <a href="https://attendance.k-ichiki.com/login" target="_blank" rel="noopener">
-                                https://attendance.k-ichiki.com/login
-                            </a>
-                        </p>
-                        <p>「一般ユーザーでログイン」ボタンからアプリを体験することができます。</p>
-
-                        <p>
-                            <strong>管理者側：</strong><br>
-                            <a href="https://attendance.k-ichiki.com/admin/login" target="_blank" rel="noopener">
-                                https://attendance.k-ichiki.com/admin/login
-                            </a>
-                        </p>
-                        <p>「管理者デモでログイン」ボタンから管理機能を体験することができます。</p>
+                        <p class="note">※ 現在デプロイ準備中です。</p>
 
                         <h4>こだわりポイント</h4>
                         <ul class="list">
-                            <li>リアルタイム打刻機能（出勤・休憩・退勤）</li>
-                            <li>修正申請・承認フローの実装</li>
-                            <li>月別勤怠データのCSV出力（UTF-8/Shift-JIS対応）</li>
-                            <li>Laravel Fortifyによる安全な認証</li>
-                            <li>レスポンシブ対応（スマホ・タブレット）</li>
-                            <li>デモログイン機能（自動ログイン・データリセット）</li>
+                            <li>深夜・残業・休日出勤・60時間超残業の自動計算</li>
+                            <li>締め日・丸め処理を管理者が自由にカスタマイズ可能</li>
+                            <li>勤務パターン登録でシフト自動入力補助（2交代・3交代対応）</li>
+                            <li>現場リーダーによる多段階承認フロー</li>
+                            <li>締め日ごとの集計・修正時に関係者へメール通知</li>
+                            <li>PDF出力・請求書メール送信の自動化</li>
+                            <li>代理入力で管理者がスタッフ分を柔軟に対応</li>
+                            <li>レスポンシブ対応・ハンバーガーメニュー（スマホ重視）</li>
                         </ul>
+
+                        <h4>制作</h4>
+                        <p>個人開発</p>
                     </div>
                 </div>
 
@@ -355,7 +350,7 @@
                 </header>
 
                 <p class="project-card__lead">
-                    個人間で商品を売買できるフリマアプリです。<br>出品・購入・チャット・レビュー機能を実装しています。
+                    個人間で商品を売買できるフリマアプリです。出品・購入・チャット・レビュー機能を実装しています。
                 </p>
 
                 <!-- ギャラリー -->
@@ -494,7 +489,7 @@
                 </header>
 
                 <p class="project-card__lead">
-                    投稿・いいね・コメント機能を実装したTwitter風SNSアプリです。<br>Firebase認証とリアルタイム更新で、ユーザー同士のコミュニケーションを実現しています。
+                    投稿・いいね・コメント機能を実装したTwitter風SNSアプリです。Firebase認証とリアルタイム更新で、ユーザー同士のコミュニケーションを実現しています。
                 </p>
 
                 <!-- ギャラリー -->
@@ -614,8 +609,8 @@
                 </header>
 
                 <p class="project-card__lead">
-                    ピアノ教室の生徒がレッスン枠を予約できるシステムです。<br>
-                    管理者側でレッスン枠を設定し、生徒が空き状況を確認して予約・キャンセルができます。<br>
+                    ピアノ教室の生徒がレッスン枠を予約できるシステムです。
+                    管理者側でレッスン枠を設定し、生徒が空き状況を確認して予約・キャンセルができます。
                     <strong>現在、実際に運用中のシステムです。</strong>
                 </p>
 
